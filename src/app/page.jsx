@@ -1,7 +1,7 @@
 'use client'
 import { useUser } from '@/context/Context'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Button from '@/components/Button'
 import Subtitle from '@/components/Subtitle'
 import Paragraph from '@/components/Paragraph'
@@ -43,7 +43,9 @@ function Home() {
     const whats = msg.replaceAll('%20')
     userDB && userDB.frontPage && userDB.frontPage['whatsapp'] && window.open(`https://api.whatsapp.com/send?phone=${userDB.frontPage['whatsapp']}&text=${whats}`, '_blank')
   }
-
+  useEffect(()=> {
+    window.navigator.vibrate([1000])
+  }, [])
   return (
     userDB && <main className="flex min-h-screen w-full flex-col items-center justify-between ">
       <Conffeti></Conffeti>
