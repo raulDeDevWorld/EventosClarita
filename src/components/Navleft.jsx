@@ -28,7 +28,7 @@ export default function Navbar({ children, funcion }) {
     }
 
     const handlerShare = () => {
-        window.open('https://wa.me/?text=https://dentalhouse.vercel.app/', '_blank')
+        window.open('https://wa.me/?text=https://multieventos-clarita.vercel.app/', '_blank')
     }
     return (
         <>

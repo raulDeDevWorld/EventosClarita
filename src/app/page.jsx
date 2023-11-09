@@ -11,7 +11,7 @@ import CardH from '@/components/CardH'
 import Modal from '@/components/Modal'
 import Navleft from '@/components/Navleft'
 import Link from 'next/link'
-
+import Conffeti from '@/components/Conffeti'
 import { WithAuth } from '@/HOCs/WithAuth'
 
 function Home() {
@@ -46,6 +46,7 @@ function Home() {
 
   return (
     userDB && <main className="flex min-h-screen w-full flex-col items-center justify-between ">
+      <Conffeti></Conffeti>
       {userDB && <Modal theme={modal} i={item} />}
       <section className='min-h-screen  w-full lg:pt-10 pb-0 flex flex-col justify-center  lg:flex-row items-center '>
         <div className='w-screen h-[40vh] flex justify-center items-end lg:w-[50vw] lg:h-[100vh]' style={{ backgroundImage: `url(${userDB.frontPage['url']})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}>
@@ -56,9 +57,8 @@ function Home() {
         {/* <div className='inline-block relative w-screen h-[45vh]  lg:w-[50vw] bg-red-500 lg:h-full bg-#FF6699-500'>
             <img src={userDB.frontPage['url']} className='inline-block relative w-full h-[90vh]' alt="" />
         </div> */}
-        <div className='w-full flex flex-col  justify-center lg:justify-around lg:w-[50vw] lg:h-auto pb-[99px] lg:pb-0 lg:p-12 lg:pt-[50px] px-[10px] lg:pr-[10px]'>
-          {/* <div className='hidden h-[30vh] w-[30vh] lg:block' style={{ backgroundImage: `url(${userDB.frontPage['urlIMG']})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}>
-          </div> */}
+        <div className='w-full flex flex-col  justify-center items-around lg:justify-around lg:w-[50vw] lg:h-auto pb-[99px] lg:pb-0 lg:p-12 lg:pt-[50px] px-[10px] lg:pr-[10px]'>
+       
           <div className='w-full hidden lg:flex lg:justify-center'>
             <img src={userDB.frontPage['urlIMG']} className='hidden h-[30vh]  lg:block' alt="" />
           </div>
@@ -69,18 +69,6 @@ function Home() {
             <h1 className='w-full text-center text-[24px] lg:text-[30px]'><span className='text-[#FF6699] font-bold'>{userDB.frontPage['especialidad 1']} </span><span className='text-[#0090A8] font-bold	'>{userDB.frontPage['especialidad 2']}</span></h1>
           </div>
           <br />
-          {/* <div className='w-full flex justify-around' >
-            <div className='flex flex-col'><span className='text-[#FF6699] text-[16px]'>Experiencia</span></div>
-            <div className='flex flex-col'><span className='text-[#FF6699] text-[16px]'>Celeridad</span></div>
-          </div> 
-          
-          
-          
-          #FF6699
-          #FF6699
-          
-          
-          */}
           <div className='w-full  lg:grid lg:grid-cols-2 lg:gap-5 '>
             <a href="#Servicios" className='w-full'><Button theme="Secondary" >Servicios</Button></a>
             <Link href={`https://api.whatsapp.com/send?phone=${userDB.frontPage['whatsapp']}&text=Hola%20Dental%20House,%20quisiera%20hacer%20una%20consulta...%20`} className='w-full'><Button theme="Primary" >Contactar</Button></Link>
