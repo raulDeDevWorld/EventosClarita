@@ -62,7 +62,7 @@ function Home() {
           <div className='w-full hidden lg:flex lg:justify-center'>
             <img src={userDB.frontPage['urlIMG']} className='hidden h-[30vh]  lg:block' alt="" />
           </div>
-          <h1 className='w-full hidden  lg:block text-center text-[12px] lg:text-[16px]'>{userDB.frontPage['direccion']} </h1>
+          <h1 className='w-full hidden  lg:block text-center text-[12px] lg:text-[16px] text-gray-700'>{userDB.frontPage['direccion']} </h1>
           <br />
           <div>
             <h1 className='w-full text-center text-[24px] lg:text-[30px]'><span className='text-[#FF6699] font-bold'>{userDB.frontPage['nombre']}</span><span className='text-[#0090A8] font-bold	'>{userDB.frontPage['apellidos']}</span></h1>
