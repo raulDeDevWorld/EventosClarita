@@ -48,7 +48,7 @@ function Home() {
     userDB && <main className="flex min-h-screen w-full flex-col items-center justify-between ">
       <Conffeti></Conffeti>
       {userDB && <Modal theme={modal} i={item} />}
-      <section className='min-h-screen  w-full lg:pt-10 pb-0 flex flex-col justify-center  lg:flex-row items-center '>
+      <section className='relative min-h-screen  w-full lg:pt-10 pb-0 flex flex-col justify-center  lg:flex-row items-center '>
         <div className='w-screen h-[40vh] flex justify-center items-end lg:w-[50vw] lg:h-[100vh]' style={{ backgroundImage: `url(${userDB.frontPage['url']})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}>
         </div>
       {/* <section className='relative h-screen w-full lg:pt-0 pb-0 flex flex-col justify-between items-center lg:grid lg:grid-cols-2 items-center bg-blue-500 pt-[82px] lg:pt-[78px]'>
@@ -57,7 +57,7 @@ function Home() {
         {/* <div className='inline-block relative w-screen h-[45vh]  lg:w-[50vw] bg-red-500 lg:h-full bg-#FF6699-500'>
             <img src={userDB.frontPage['url']} className='inline-block relative w-full h-[90vh]' alt="" />
         </div> */}
-        <div className='w-full flex flex-col  justify-center items-around lg:justify-around lg:w-[50vw] lg:h-auto pb-[99px] lg:pb-0 lg:p-12 lg:pt-[50px] px-[10px] lg:pr-[10px]'>
+        <div className='w-full h-full flex flex-col  justify-center items-around lg:justify-around lg:w-[50vw] lg:h-auto pb-[99px] lg:pb-0 lg:p-12 lg:pt-[50px] px-[10px] lg:pr-[10px]'>
        
           <div className='w-full hidden lg:flex lg:justify-center'>
             <img src={userDB.frontPage['urlIMG']} className='hidden h-[30vh]  lg:block' alt="" />
